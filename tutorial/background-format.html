@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<title>Master Note Tutorial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.w3-sidenav a,.w3-sidenav h4{padding:12px;}
+.w3-navbar a{padding-top:12px !important;padding-bottom:12px !important;}
+
+	.main-list {
+		padding-left:0;
+		list-style-type: none;
+		overflow:hidden;
+		overflow:scroll;
+	}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<ul class="w3-navbar w3-theme w3-top w3-left-align w3-large" style="z-index:4;">
+  <li class="w3-opennav w3-right w3-hide-large">
+    <a class="w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </li>
+  <li><a href="index.html" class="w3-theme-l1">Masternuts</a></li>
+</ul>
+
+<!-- Sidenav -->
+<nav class="w3-sidenav w3-collapse w3-theme-l5 w3-animate-left" style="z-index:3;width:250px;margin-top:51px;" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="close menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4><b>Topics</b></h4>
+  <ul class="main-list">
+		<li><a href="add-library.html" class="w3-hover-black" id="listAddLibrary">Add Library</a></li>
+		<li><a href="remove-library.html" class="w3-hover-black" id="listRemoveLibrary">Remove Library</a></li>
+		<li><a href="rename-library.html" class="w3-hover-black" id="listRenameLibrary">Rename Library</a></li>
+	
+		<li><a href="add-book.html" class="w3-hover-black" id="listAddBook">Add Book</a></li>
+		<li><a href="remove-book.html" class="w3-hover-black" id="listRemoveBook">Remove Book</a></li>
+		<li><a href="rename-book.html" class="w3-hover-black" id="listRenameBook">Rename Book</a></li>
+		<li><a href="move-book.html" class="w3-hover-black" id="listMoveBook">Move Book</a></li>
+	
+		<li><a href="export-library.html" class="w3-hover-black" id="listExportLibrary">Export Library</a></li>
+		<li><a href="export-book.html" class="w3-hover-black" id="listExportBook">Export Book</a></li>
+
+		<li><a href="import-book.html" class="w3-hover-black" id="listImportBook">Import Book</a></li>
+		
+		<li><a href="export-backup.html" class="w3-hover-black" id="listExportBackup">Export Local Backup</a></li>
+		<li><a href="import-backup.html" class="w3-hover-black" id="listImportBackup">Import Local Backup</a></li>
+		
+		<li><a href="autosave.html" class="w3-hover-black" id="listAutosave">Autosave</a></li>
+		<li><a href="camera-gallery-image.html" class="w3-hover-black" id="listCameraGalleryImage">Camera & Gallery Image</a></li>
+		<li><a href="share-image.html" class="w3-hover-black" id="listShareImage">Share Image</a></li>
+	
+		<li><a href="background-format.html" class="w3-hover-black" id="listBackgroundFormat">Background Format</a></li>
+		
+		<li><a href="#" class="w3-hover-black" id="listBackgroundFormat"> </a></li>
+  </ul>
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidenav is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- pageFormat div -->
+  <div class="w3-row w3-padding-64" id="backgroundFormatDiv">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Changing your page background format</h1>
+      
+      <p>You can change the background format of a certain page or the whole book.</p>
+				
+				<ul>
+					<li>Open the left panel</li>
+					<li>Go to "Format" tab</li>
+					<li>Choose one of the displayed formats and play with its properties until you reach the format you would like to have!</li>
+				</ul>
+				
+				<h4>Note1:</h4>
+				If you wanted to apply the new background format to all the pages in the current book just press "Apply All Pages" button!
+				
+				<br><br>
+				<h4>Note2:</h4>
+				Grid background format helps a lot when you are drawing shapes, you can connect your shape vertices to the vertices
+				of the grid's squares.<br>
+				To make use of this feature you need to have the step movement feature of shapes
+				or selection tool (the tool you are using) enabled also.
+				
+				<br><br><br>
+				The following GIF will help you know exactly how to change the background format of a page:
+				<br> <br> <br>
+				<div style="display: flex; justify-content: center;">
+  				<img src="../assets/images/tutorial/BackgroundFormat.gif" alt="Background Format" align="middle">
+				</div>
+    </div>
+  </div>
+  <!-- End pageFormat div -->
+
+  <!-- <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer> -->
+
+<!-- END MAIN -->
+</div>
+
+<!-- jQuery -->
+<script src="assets/bootstrap/js/jquery.js"></script>
+
+<script>
+// Get the Sidenav
+var mySidenav = document.getElementById("mySidenav");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidenav, and add overlay effect
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidenav.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+    overlayBg.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
+
